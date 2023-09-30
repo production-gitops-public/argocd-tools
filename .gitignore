@@ -1,6 +1,5 @@
 # Default ignored files
 /shelf/
-/.idea/workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -8,5 +7,5 @@
 /dataSources.local.xml
 
 
-/ArgoCD.iml
-/.idea/
+ArgoCD.iml
+.idea/
