@@ -7,5 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 
-!/.idea/
-!/ArgoCD.iml
+
+/ArgoCD.iml
+/.idea/
