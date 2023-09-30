@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: argocd
+  labels:
+    app: argocd
+spec:
+  grafana:
+    enabled: true
+    route:
+      enabled: true
+  prometheus:
+    enabled: true
+    route:
+      enabled: true
+  server:
+    route:
+      enabled: true
+      
