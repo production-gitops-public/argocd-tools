@@ -10,6 +10,7 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
+    namespace: cp4i
   project: default
   source:
     path: {{ .Values.apiConnectVersion }}
