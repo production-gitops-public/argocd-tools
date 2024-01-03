@@ -6,4 +6,5 @@ spec:
     targetRevision: HEAD
 
 cp4iVersion: '2023.4.1'
+cp4iNamespace: 'cp4i'
 apiConnectVersion: '10.0.7.0'

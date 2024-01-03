@@ -10,6 +10,7 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
+    namespace: {{ .Values.cp4iNamespace }}
   project: default
   source:
     path: {{ .Values.cp4iVersion }}
