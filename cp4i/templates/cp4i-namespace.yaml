@@ -4,5 +4,3 @@ metadata:
   name: {{ .Values.cp4iNamespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
