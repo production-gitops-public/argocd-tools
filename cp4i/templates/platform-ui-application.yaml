@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-ui
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: {{ .Values.cp4iVersion }}
+    repoURL: '{{ .Values.spec.source.repoURL }}/cloud-pak-for-integration.git'
+    targetRevision: {{ .Values.spec.source.targetRevision }}
