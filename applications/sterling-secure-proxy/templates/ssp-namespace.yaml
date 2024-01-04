@@ -1,0 +1,6 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: ssp
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
