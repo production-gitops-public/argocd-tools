@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sterling-secure-proxy
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: '{{ .Values.sspVersion }}/ibm-ssp-engine'
+    repoURL: '{{ .Values.spec.source.repoURL }}/sterling-secure-proxy.git'
+    targetRevision: {{ .Values.spec.source.targetRevision }}
