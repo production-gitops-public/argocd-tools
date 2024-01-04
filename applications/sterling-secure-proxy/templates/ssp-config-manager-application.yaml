@@ -10,6 +10,7 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
+    namespace: ssp
   project: default
   source:
     path: '{{ .Values.sspVersion }}/ibm-ssp-cm'
