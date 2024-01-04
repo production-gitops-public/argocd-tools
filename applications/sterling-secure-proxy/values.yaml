@@ -6,3 +6,4 @@ spec:
     targetRevision: HEAD
 
 sspVersion: '6.1.0.0'
+namespace: ssp
