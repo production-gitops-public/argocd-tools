@@ -13,6 +13,6 @@ spec:
     namespace: {{ .Values.cp4iNamespace }}
   project: default
   source:
-    path: {{ .Values.apiConnectVersion }}
+    path: '{{ .Values.apiConnectVersion }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/api-connect.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}

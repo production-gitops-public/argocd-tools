@@ -13,6 +13,6 @@ spec:
     namespace: {{ .Values.cp4iNamespace }}
   project: default
   source:
-    path: {{ .Values.mqVersion }}
+    path: '{{ .Values.mqVersion }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/ibm-mq.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
