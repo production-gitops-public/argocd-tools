@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: api-connect
+  name: event-streams
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "200"
