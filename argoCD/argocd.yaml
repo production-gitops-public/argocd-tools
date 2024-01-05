@@ -85,4 +85,10 @@ spec:
                 hs.message = obj.status.state
               end
               return hs
+    resource.compareoptions: |
+      ignoreResourceStatusField: crd
+    resource.customizations.ignoreDifferences.ServiceAccount: |
+      jqPathExpressions:
+      - '.secrets'
+      - '.imagePullSecrets'
         
