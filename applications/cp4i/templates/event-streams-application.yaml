@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: api-connect
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "200"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: {{ .Values.spec.destination.server }}
+    namespace: {{ .Values.cp4iNamespace }}
+  project: default
+  source:
+    path: '{{ .Values.eventStreamsVersion }}'
+    repoURL: '{{ .Values.spec.source.repoURL }}/event-streams.git'
+    targetRevision: {{ .Values.spec.source.targetRevision }}
