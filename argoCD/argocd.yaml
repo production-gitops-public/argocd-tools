@@ -19,6 +19,7 @@ spec:
       enabled: true
   extraConfig:
     resource.customizations: |
+      kustomize.buildOptions: --enable-helm
       argoproj.io/Application:
         health.lua: |
           hs = {}
