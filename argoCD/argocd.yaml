@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
 metadata:
   name: argocd
@@ -18,8 +18,8 @@ spec:
     route:
       enabled: true
   extraConfig:
+    kustomize.buildOptions: --enable-helm
     resource.customizations: |
-      kustomize.buildOptions: --enable-helm
       argoproj.io/Application:
         health.lua: |
           hs = {}
