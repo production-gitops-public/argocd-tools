@@ -2,7 +2,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/ibm-gitops-public
+    repoURL: https://github.com/production-gitops-public
     targetRevision: HEAD
 
 sspVersion: '6.1.0.0'
