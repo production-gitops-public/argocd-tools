@@ -13,6 +13,8 @@ helmCharts:
     releaseName: event-streams
   - name: ibm-mq
     releaseName: ibm-mq
+  - name: api-connect
+    releaseName: api-connect
 
 # Sustainability
   - name: sterling-secure-proxy
