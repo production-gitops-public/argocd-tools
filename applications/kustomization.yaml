@@ -9,13 +9,13 @@ helmCharts:
 # Cloud Pak for Integration Products
   - name: cp4i-platform-navigator
     releaseName: cp4i-platform-navigator
-  - name: event-streams
-    releaseName: event-streams
-  - name: ibm-mq
-    releaseName: ibm-mq
-  - name: api-connect
-    releaseName: api-connect
-
-# Sustainability
-  - name: sterling-secure-proxy
-    releaseName: sterling-secure-proxy
+#  - name: event-streams
+#    releaseName: event-streams
+#  - name: ibm-mq
+#    releaseName: ibm-mq
+#  - name: api-connect
+#    releaseName: api-connect
+#
+## Sustainability
+#  - name: sterling-secure-proxy
+#    releaseName: sterling-secure-proxy
