@@ -1,0 +1,12 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/production-gitops-public
+    targetRevision: HEAD
+
+cp4iVersion: '2023.4.1'
+cp4iNamespace: 'cp4i'
+apiConnectVersion: '10.0.7.0'
+mqVersion: '9.3'
+eventStreamsVersion: '11.3.0'
