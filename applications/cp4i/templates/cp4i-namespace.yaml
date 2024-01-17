@@ -1,6 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: {{ .Values.cp4iNamespace }}
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
