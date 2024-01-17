@@ -13,6 +13,6 @@ spec:
     namespace: {{ .Values.cp4iNamespace }}
   project: default
   source:
-    path: '{{ .Values.cp4iVersion }}'
+    path: '{{ .Values.cp4iVersion }}/{{ .Values.envType }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
