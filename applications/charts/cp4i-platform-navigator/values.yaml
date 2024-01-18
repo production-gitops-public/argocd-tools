@@ -6,7 +6,6 @@ spec:
     targetRevision: HEAD
 
 cp4iVersion: '2023.4.1'
-cp4iNamespace: 'cp4i'
 
 # Type of environment to deploy (dev, prod)
 envType: dev

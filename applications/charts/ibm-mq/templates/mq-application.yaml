@@ -10,9 +10,8 @@ metadata:
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.cp4iNamespace }}
   project: default
   source:
-    path: '{{ .Values.mqVersion }}'
+    path: '{{ .Values.mqVersion }}/{{ .Values.envType }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/ibm-mq.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
