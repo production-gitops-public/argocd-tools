@@ -37,13 +37,13 @@ spec:
             namespace: base
           patch: |-
             - op: add
-              path: /spec/targetNamespaces
+              path: /spec/targetNamespaces/-
               value: {{ .Values.namespaceOverride }}
         - target:
             kind: OperatorGroup
             name: operatorgroup
             namespace: base
           patch: |-
-            - op: add
+            - op: replace
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
