@@ -16,6 +16,8 @@ spec:
     repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
+      valueFiles:
+        - ../base/charts/cp4i-pn-operators/values.yaml
       parameters:
         - name: "metadata.namespace"
           value: {{ .Values.namespaceOverride }}
