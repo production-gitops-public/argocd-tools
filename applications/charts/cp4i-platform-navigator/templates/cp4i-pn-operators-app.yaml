@@ -15,7 +15,7 @@ spec:
     path: '{{ .Values.cp4iVersion }}/{{ .Values.opDir }}/{{ .Values.envType }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
-  helm:
-    parameters:
-      - name: metadata.namespace
-        value: {{ .Values.namespaceOverride }}
+    helm:
+      parameters:
+        - name: "metadata.namespace"
+          value: {{ .Values.namespaceOverride }}
