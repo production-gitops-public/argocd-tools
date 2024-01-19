@@ -11,15 +11,39 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
   project: default
-  sources:
+  source:
   - repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     path: '{{ .Values.cp4iVersion }}/{{ .Values.opDir }}/{{ .Values.envType }}'
-    helm:
-      valueFiles:
-        - $values/2023.4.1/operators/base/charts/cp4i-pn-operators/values.yaml
-      parameters:
-        - name: "metadata.namespace"
-          value: {{ .Values.namespaceOverride }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
-  - repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
-    ref: values
+    kustomize:
+      patches:
+        - target:
+            kind: Namespace
+            name: base
+          patch: |-
+            - op: replace
+              path: /metadata/name
+              value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: Namespace
+            name: base
+          patch: |-
+            - op: replace
+              path: "/metadata/labels/kubernetes.io~1metadata.name"
+              value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: OperatorGroup
+            name: operatorgroup
+            namespace: base
+          patch: |-
+            - op: replace
+              path: /spec/targetNamespaces
+              value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: OperatorGroup
+            name: operatorgroup
+            namespace: base
+          patch: |-
+            - op: replace
+              path: /metadata/namespace
+              value: {{ .Values.namespaceOverride }}
