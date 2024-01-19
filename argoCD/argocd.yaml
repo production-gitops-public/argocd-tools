@@ -18,7 +18,7 @@ spec:
     route:
       enabled: true
   extraConfig:
-    #kustomize.buildOptions: --enable-helm
+    kustomize.buildOptions: --enable-helm
     resource.customizations: |
       argoproj.io/Application:
         health.lua: |
