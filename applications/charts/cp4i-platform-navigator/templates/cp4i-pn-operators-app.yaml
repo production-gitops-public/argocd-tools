@@ -11,10 +11,12 @@ spec:
   destination:
     server: {{ .Values.spec.destination.server }}
   project: default
-  source:
+  sources:
+  - repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     path: '{{ .Values.cp4iVersion }}/{{ .Values.opDir }}/{{ .Values.envType }}'
-    repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  - repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
+    path: '{{ .Values.cp4iVersion }}/{{ .Values.opDir }}/base/charts/cp4i-pn-operators'
     helm:
       valueFiles:
         - 2023.4.1/operators/base/charts/cp4i-pn-operators/values.yaml
