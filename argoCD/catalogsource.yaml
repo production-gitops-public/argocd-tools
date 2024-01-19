@@ -5,6 +5,6 @@ metadata:
   namespace: openshift-marketplace
 spec:
   sourceType: grpc
-  image: quay.io/argoprojlabs/argocd-operator-registry@sha256:dcf6d07ed5c8b840fb4a6e9019eacd88cd0913bc3c8caa104d3414a2e9972002 # replace with your index image
+  image: quay.io/argoprojlabs/argocd-operator-registry@sha256:2fe77f5b9af0aee4a8c214617585cd89bffcb115460dedf4604321c1381eb2c3
   displayName: Argo CD Operators
   publisher: Argo CD Community
