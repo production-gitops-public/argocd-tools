@@ -7,5 +7,9 @@ spec:
 
 cp4iVersion: '2023.4.1'
 
+# Variable for the directories, only needs to change if your directories on CP4I do not match initial config
+appDir: app
+opDir: operators
+
 # Type of environment to deploy (dev, prod)
 envType: dev
