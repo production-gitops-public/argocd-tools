@@ -34,7 +34,7 @@ spec:
         - target:
             kind: OperatorGroup
             name: operatorgroup
-            namespace: base
+            labelSelector: "managed-by=kustomize-argocd"
           patch: |-
             - op: add
               path: /spec/targetNamespaces/-
@@ -42,9 +42,9 @@ spec:
         - target:
             kind: OperatorGroup
             name: operatorgroup
-            namespace: base
+            labelSelector: "managed-by=kustomize-argocd"
           patch: |-
-            - op: replace
+            - op: add
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
         - target:
