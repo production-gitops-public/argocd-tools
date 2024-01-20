@@ -21,13 +21,13 @@ spec:
             kind: PlatformNavigator
             labelSelector: "managed-by=kustomize-argocd"
           patch: |-
-            - op: replace
+            - op: add
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
         - target:
             kind: CommonService
             labelSelector: "managed-by=kustomize-argocd"
           patch: |-
-            - op: replace
+            - op: add
               path: /spec/storageClass
               value: {{ .Values.storage.blockStorage }}
