@@ -50,8 +50,8 @@ spec:
         - target:
             kind: Subscription
             name: ibm-common-service-operator
-            namespace: base
+            labelSelector: "managed-by=kustomize-argocd"
           patch: |-
-            - op: replace
+            - op: add
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
