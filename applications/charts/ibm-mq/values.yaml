@@ -6,3 +6,8 @@ spec:
     targetRevision: HEAD
 
 mqVersion: '9.3'
+namespaceOverride: cp4i
+envType: dev
+
+storage:
+  fileStorage: ocs-storagecluster-cephfs
