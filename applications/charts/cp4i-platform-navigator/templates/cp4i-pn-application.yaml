@@ -15,3 +15,19 @@ spec:
     path: '{{ .Values.cp4iVersion }}/{{ .Values.appDir }}/{{ .Values.envType }}'
     repoURL: '{{ .Values.spec.source.repoURL }}/cp4i-platform-navigator.git'
     targetRevision: {{ .Values.spec.source.targetRevision }}
+    kustomize:
+      patches:
+        - target:
+            kind: PlatformNavigator
+            labelSelector: "managed-by=kustomize-argocd"
+          patch: |-
+            - op: replace
+              path: /metadata/namespace
+              value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: CommonService
+            labelSelector: "managed-by=kustomize-argocd"
+            patch: |-
+              - op: replace
+                path: /spec/storageClass
+                value: {{ .Values.storage.blockStorage }}
