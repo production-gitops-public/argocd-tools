@@ -47,11 +47,3 @@ spec:
             - op: add
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
-        - target:
-            kind: Subscription
-            name: ibm-common-service-operator
-            labelSelector: "managed-by=kustomize-argocd"
-          patch: |-
-            - op: add
-              path: /metadata/namespace
-              value: {{ .Values.namespaceOverride }}

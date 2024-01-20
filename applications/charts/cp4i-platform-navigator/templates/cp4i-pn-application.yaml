@@ -38,3 +38,10 @@ spec:
             - op: add
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: CommonService
+            labelSelector: "managed-by=kustomize-argocd"
+          patch: |-
+            - op: add
+              path: /spec/operatorNamespace
+              value: {{ .Values.namespaceOverride }}
