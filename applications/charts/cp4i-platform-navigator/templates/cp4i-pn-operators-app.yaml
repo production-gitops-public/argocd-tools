@@ -47,3 +47,11 @@ spec:
             - op: replace
               path: /metadata/namespace
               value: {{ .Values.namespaceOverride }}
+        - target:
+            kind: Subscription
+            name: ibm-common-service-operator
+            namespace: base
+          patch: |-
+            - op: replace
+              path: /metadata/namespace
+              value: {{ .Values.namespaceOverride }}
