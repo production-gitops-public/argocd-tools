@@ -31,17 +31,3 @@ spec:
             - op: add
               path: /spec/storageClass
               value: {{ .Values.storage.blockStorage }}
-        - target:
-            kind: CommonService
-            labelSelector: "managed-by=kustomize-argocd"
-          patch: |-
-            - op: add
-              path: /metadata/namespace
-              value: {{ .Values.namespaceOverride }}
-        - target:
-            kind: CommonService
-            labelSelector: "managed-by=kustomize-argocd"
-          patch: |-
-            - op: add
-              path: /spec/operatorNamespace
-              value: {{ .Values.namespaceOverride }}
