@@ -27,7 +27,7 @@ spec:
         - target:
             kind: CommonService
             labelSelector: "managed-by=kustomize-argocd"
-            patch: |-
-              - op: replace
-                path: /spec/storageClass
-                value: {{ .Values.storage.blockStorage }}
+          patch: |-
+            - op: replace
+              path: /spec/storageClass
+              value: {{ .Values.storage.blockStorage }}
