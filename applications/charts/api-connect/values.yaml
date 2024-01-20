@@ -9,3 +9,6 @@ apiConnectVersion: '10.0.7.0'
 
 # Type of environment to deploy (dev, prod)
 envType: dev
+namespaceOverride: cp4i
+storage:
+  blockStorage: ocs-storagecluster-ceph-rbd
