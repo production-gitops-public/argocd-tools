@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ibm-catalog-source
-  namespace: argocd
+  namespace: {{ .Values.applicationNamespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
   finalizers:
