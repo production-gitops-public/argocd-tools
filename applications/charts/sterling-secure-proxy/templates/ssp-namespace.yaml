@@ -2,5 +2,7 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: ssp
+  labels:
+    argocd.argoproj.io/managed-by=openshift-gitops-operator
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
