@@ -12,3 +12,4 @@ envType: dev
 namespaceOverride: cp4i
 storage:
   blockStorage: ocs-storagecluster-ceph-rbd
+argocdNamespace: openshift-gitops

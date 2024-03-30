@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ssp-cm
-  namespace: argocd
+  namespace: {{ .Values.argocdNamespace }}
   annotations:
     argocd.argoproj.io/sync-wave: "100"
   finalizers:

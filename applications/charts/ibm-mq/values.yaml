@@ -11,3 +11,4 @@ envType: dev
 
 storage:
   fileStorage: ocs-storagecluster-cephfs
+argocdNamespace: openshift-gitops

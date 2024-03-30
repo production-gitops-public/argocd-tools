@@ -7,3 +7,4 @@ spec:
 
 sspVersion: '6.1.0.0'
 namespace: ssp
+argocdNamespace: openshift-gitops
