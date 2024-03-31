@@ -1,4 +1,11 @@
-kind: Project
-apiVersion: project.openshift.io/v1
+kind: Namespace
+apiVersion: v1
 metadata:
   name: argocd
+
+---
+
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: argocd-operator

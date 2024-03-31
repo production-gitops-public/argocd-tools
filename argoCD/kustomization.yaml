@@ -4,6 +4,38 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - argocd.yaml
-  - catalogsource.yaml
-  - operatorgroup.yaml
   - subscription.yaml
+
+patches:
+  - target:
+      kind: Namespace
+      version: v1
+      name: argocd
+    patch: |-
+      - op: add
+        path: /metadata/name
+        value: gitops
+  - target:
+      kind: Namespace
+      version: v1
+      name: argocd-operator
+    patch: |-
+      - op: add
+        path: /metadata/name
+        value: gitops-operator
+  - target:
+      kind: ArgoCD
+      group: argoproj.io
+      version: v1beta1
+    patch: |-
+      - op: add
+        path: /metadata/namespace
+        value: gitops
+  - target:
+      kind: Subscription
+      group: operators.coreos.com
+      version: v1alpha1
+    patch: |-
+      - op: add
+        path: /metadata/namespace
+        value: gitops-operator
