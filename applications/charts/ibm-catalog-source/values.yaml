@@ -4,4 +4,4 @@ spec:
   source:
     repoURL: https://github.com/production-gitops-public
     targetRevision: HEAD
-applicationNamespace: openshift-gitops
+applicationNamespace: gitops
